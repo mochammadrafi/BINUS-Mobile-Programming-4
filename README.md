@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+# 📱 Aplikasi Survey Lapangan – React Native
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplikasi mobile yang digunakan untuk melakukan **survey lapangan berbasis lokasi** dengan **Google Sign-In**, **Google Maps API**, **SQLite lokal**, serta **sinkronisasi ke web service** (REST API). Dibangun menggunakan **React Native (Expo)** agar dapat berjalan di Android maupun iOS.
 
-## Get started
+## 🎯 Fitur Utama
 
-1. Install dependencies
+- 🔐 **Login/Register dengan Google Sign-In**  
+  Menggunakan akun email Google untuk otentikasi pengguna.
 
-   ```bash
-   npm install
-   ```
+- 🗺️ **Tampilan Google Maps di Halaman Utama**  
+  Menampilkan lokasi pengguna dan titik-titik survey pada peta dengan integrasi Google Maps SDK.
 
-2. Start the app
+- 📝 **Form Survey Lapangan**  
+  Input data survey secara offline menggunakan database lokal (SQLite).
 
-   ```bash
-   npx expo start
-   ```
+- 🌐 **Sinkronisasi Data ke Web API**  
+  Data survey yang tersimpan secara offline dapat disinkronkan ke server online menggunakan REST API.
 
-In the output, you'll find options to open the app in a
+- 🎨 **UI Responsif dan Estetis**  
+  Menggunakan desain yang intuitif, responsif, dan ramah terhadap berbagai ukuran layar.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- ♿ **Aksesibilitas**  
+  Komponen UI mengikuti prinsip desain aksesibilitas Android.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ⚙️ Teknologi yang Digunakan
 
-## Get a fresh project
+| Kebutuhan         | Teknologi / Library                           |
+|------------------|-----------------------------------------------|
+| Framework        | React Native (Expo)                           |
+| Auth             | `expo-auth-session`, `expo-google-app-auth`   |
+| Maps             | `react-native-maps` + Google Maps API         |
+| Database Offline | `expo-sqlite`                                 |
+| API Sync         | `axios`, `fetch`, atau `react-query`          |
+| UI Component     | `react-native-paper`, `react-navigation`, `mui`      |
+| Responsive UI    | `flexbox`, `Dimensions`, `Platform`           |
+| Accessibility    | `accessibilityLabel`, `accessible` props      |
 
-When you're ready, run:
+## 🚀 Cara Menjalankan
+
+### 1. Clone Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/username/survey-lapangan.git
+cd survey-lapangan
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install Dependency
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Jalankan Aplikasi
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo start
+```
 
-## Join the community
+Buka dengan aplikasi **Expo Go** di Android/iOS, atau jalankan langsung di emulator.
 
-Join our community of developers creating universal apps.
+## 🌐 Konfigurasi Web Service (API)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Pastikan endpoint API sudah tersedia dan sesuai dengan struktur data SQLite. Contoh endpoint:
+```
+POST https://api.example.com/survey/upload
+```
+
+## 📄 Lisensi
+
+Aplikasi ini dibuat untuk keperluan akademik dan edukasi. Silakan gunakan dan modifikasi sesuai kebutuhan tugas Anda.
